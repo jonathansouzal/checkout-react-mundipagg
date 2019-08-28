@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toast, ToastBody, ToastHeader, Spinner } from 'reactstrap';
 import './App.css';
 
 export default class Example extends React.Component {
@@ -6,8 +7,14 @@ export default class Example extends React.Component {
     return (
         <div className="produto"> 
   
-        <h1>Aqui fica o produto</h1>
-
+        <Toast>
+        <ToastHeader icon="success">
+          Exemplo nome - Pilates
+        </ToastHeader>
+        <ToastBody>
+          Breve descrição da modalidade — R$ 250,00
+        </ToastBody>
+      </Toast>
         </div>
     );
   }
