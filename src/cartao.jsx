@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Row, Col } from 'reactstrap';
 import CardReactFormContainer from 'card-react';
 import '../node_modules/card-react/lib/card.css';
 
@@ -15,11 +16,6 @@ export default class Example extends React.Component {
  
  container="card-wrapper" // required
 
- initialValues= {
-    {
-      number: '•••• •••• •••• ••••', // optional — default •••• •••• •••• ••••
-    }
-  }
  // an object contain the form inputs names.
  // every input must have a unique name prop.
  formInputsNames={
@@ -38,18 +34,23 @@ export default class Example extends React.Component {
  }
 >
 
- <form>
-   <input placeholder="Nome no cartão" type="text" name="CCname" />
-   <input placeholder="Número do cartão" type="text" name="CCnumber" />
-   <input placeholder="MM/YY" type="text" name="CCexpiry" />
-   <input placeholder="CVC" type="text" name="CCcvc" />
+ <form className="formularioCartao">
+ <Row className="cartaoDadosNomeNumero">
+          <Col><input placeholder="Nome no cartão" type="text" name="CCname" /></Col>
+  </Row>
+  <Row className="cartaoDadosNomeNumero">
+          <Col><input placeholder="Número do cartão" type="text" name="CCnumber" /></Col>
+  </Row>
+  <div className="cartaoDados">
+          <div className="cartaoDadosTamanho">
+          <input placeholder="Mês/Ano" type="text" name="CCexpiry" />
+          <input placeholder="CVC" type="text" name="CCcvc" />
+          </div>
+  </div>  
+   
  </form>
 
 </CardReactFormContainer>
-
-
-
-
 
         </div>
     );

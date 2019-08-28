@@ -107,14 +107,13 @@ export default class Example extends React.Component {
         <div className="copy">
         
         </div>
-      </Form>          
-          
+      </Form>                
           
           </Col>
           <Col>
           <Produto></Produto>
           <Cartao></Cartao>
-          <Button color="success">Comprar agora</Button>{' '}
+          <Button color="success" className="botaoComprar">Comprar agora</Button>{' '}
           </Col>
 </Row>
       
