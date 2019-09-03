@@ -5,7 +5,18 @@ var RespostaClass = require('../model/RespostaClass');
 
 router.get("/", function(req, res, next){
 
-    ProdutoModel.getTodos(function(erro, retorno){
+    ProdutoModel.getTodosAtividade(function(erro, retorno){
+        let resposta = new RespostaClass();
+
+        if(erro){
+            resposta.erro = true;
+            resposta.msg = 'Ocorreu um erro';
+        }else{
+            resposta.dados = retorno;
+        }
+        res.json(resposta);
+    });
+    ProdutoModel.getTodosMatricula(function(erro, retorno){
         let resposta = new RespostaClass();
 
         if(erro){
@@ -18,9 +29,9 @@ router.get("/", function(req, res, next){
     });
 });
 
-router.get("/:id?", function(req, res, next){
+router.get("/:class_id?", function(req, res, next){
 
-    ProdutoModel.getId(req.params.id ,function(erro, retorno){
+    ProdutoModel.getClass_id(req.params.title ,function(erro, retorno){
         let resposta = new RespostaClass();
 
         if(erro){
@@ -42,6 +53,7 @@ router.post("/?", function(req, res, next){
         if(erro){
             resposta.erro = true;
             resposta.msg = 'Ocorreu um erro';
+            console.log('erro:', erro);
         }else{
             if(retorno.affectedRows > 0){
                 resposta.msg = 'cadastro realizado com sucesso.';
@@ -54,9 +66,9 @@ router.post("/?", function(req, res, next){
     })
 })
 
-router.delete("/:id", function(req, res, next){
+router.delete("/:class_id", function(req, res, next){
 
-    ProdutoModel.deletar(req.params.id, function(erro, retorno){
+    ProdutoModel.deletar(req.params.class_id, function(erro, retorno){
         let resposta = new RespostaClass();
 
         if(erro){

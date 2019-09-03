@@ -62,7 +62,7 @@
   text-align: left;  
   padding-left: 20px !important;
 }
-.descricaoProduto {
+.matriculaProduto {
   font-size: 14px;
   text-align: left;
   padding-left: 20px !important;
@@ -120,10 +120,18 @@
   border-radius: 5px;
 }
 
-.headerPrincipal {
+/* .headerPrincipal {
   background: linear-gradient(to right, #00b4db, #0083b0);
   width: 100%;
   color: white;
   margin-bottom: 20px;
   padding-top: 10px;
+} */
+.headerPrincipal {
+  width: 100%;
+  color: #00b4db;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 28px;
+  border-bottom: 1px solid #1C6EA4;
 }

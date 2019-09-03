@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 
 export default class Example extends React.Component {
   render() {

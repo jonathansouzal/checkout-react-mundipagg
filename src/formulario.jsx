@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from 'reactstrap';
 import Contrato from './contrato';
 import Cartao from './cartao';
-import Produto from './produto';
+import Produto2 from './produto2';
 
 
 export default class Example extends React.Component {
@@ -110,7 +110,7 @@ export default class Example extends React.Component {
           
           </Col>
           <Col>
-          <Produto></Produto>
+          <Produto2></Produto2>
           <Cartao></Cartao>
           <Button color="success" className="botaoComprar">Comprar agora</Button>{' '}
           </Col>

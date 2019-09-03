@@ -17,5 +17,6 @@ router.get("/", (req, res) => res.json({
 
 api.use('/', router);
 api.use('/produto', produtoRouter);
+api.use('/cadastro', produtoRouter); ///teste para cadastro
 
 api.listen(port);
